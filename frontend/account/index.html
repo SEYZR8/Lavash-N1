@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lavash N1 — Mening kabinetim</title><link rel="stylesheet" href="/css/style.css"></head>
+<body>
+<header class="header"><div class="container header-inner"><a class="logo" href="/"><span class="logo-icon">🌯</span><span>Lavash <b>N1</b></span></a><a class="secondary-button" href="/">← Menyuga</a></div></header>
+<main class="container" style="padding:70px 0;max-width:900px">
+<section id="auth" style="max-width:480px;margin:auto">
+<div class="section-heading"><span>KABINET</span><h2>Hisobingizga kiring</h2></div>
+<form id="loginForm" style="display:grid;gap:14px;margin-top:25px"><input id="phone" placeholder="Telefon: +998..." required><input id="password" type="password" placeholder="Parol" required><button class="primary-button">Kirish</button><p id="msg"></p></form>
+<hr style="margin:35px 0"><h3>Yangi mijozmisiz?</h3>
+<form id="registerForm" style="display:grid;gap:14px;margin-top:15px"><input id="name" placeholder="Ism" required><input id="rphone" placeholder="Telefon" required><input id="rpassword" type="password" placeholder="Parol (6+)" required><button class="secondary-button">Ro‘yxatdan o‘tish</button></form>
+</section>
+<section id="account" class="hidden">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap"><div><span class="section-label">SHAXSIY KABINET</span><h2 id="welcome"></h2></div><button id="logout" class="secondary-button">Chiqish</button></div>
+<div class="panel-card" style="margin-top:25px;padding:25px"><h3>Profil</h3><form id="profileForm" style="display:grid;gap:12px;margin-top:15px;max-width:500px"><input id="pname" required><input id="pphone" required><button class="primary-button">Saqlash</button></form></div>
+<div class="panel-card" style="margin-top:25px;padding:25px"><h3>Buyurtmalarim</h3><div id="orders" style="display:grid;gap:14px;margin-top:15px"></div></div>
+</section>
+</main>
+<script src="/account/account.js"></script></body></html>

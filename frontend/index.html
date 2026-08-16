@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Lavash N1 — mazali lavash, burger, fri va ichimliklar. Tez va qulay buyurtma bering."
+    >
+
+    <meta
+        name="theme-color"
+        content="#ff6b00"
+    >
+
+    <title>Lavash N1 | Fast Food</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container header-inner">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">🌯</span>
+                <span>Lavash <b>N1</b></span>
+            </a>
+
+            <nav class="desktop-nav">
+
+                <a href="#home">Bosh sahifa</a>
+
+                <a href="#menu">Menyu</a>
+
+                <a href="#about">Biz haqimizda</a>
+
+                <a href="#contact">Aloqa</a>
+                <a href="/account">👤 Kabinet</a>
+
+            </nav>
+
+            <button
+                class="cart-button"
+                id="cartButton"
+                type="button"
+            >
+                🛒
+                <span>Savatcha</span>
+                <strong id="cartCount">0</strong>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MOBILE NAV ================= -->
+
+    <nav class="mobile-nav">
+
+        <a href="#home">
+            <span>🏠</span>
+            <small>Bosh sahifa</small>
+        </a>
+
+        <a href="#menu">
+            <span>🍔</span>
+            <small>Menyu</small>
+        </a>
+
+        <button id="mobileCartButton">
+            <span>🛒</span>
+            <small>Savatcha</small>
+            <b id="mobileCartCount">0</b>
+        </button>
+
+        <a href="#contact">
+            <span>☎️</span>
+            <small>Aloqa</small>
+        </a>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        🔥 Bugungi maxsus taklif
+                    </div>
+
+                    <h1>
+                        Mazali ta'm.
+                        <span>Lavash N1.</span>
+                    </h1>
+
+                    <p>
+                        Yangi tayyorlangan lavash, burger, fri
+                        va ichimliklarni bir necha bosishda buyurtma qiling.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#menu"
+                            class="primary-button"
+                        >
+                            Menyuni ko‘rish
+                        </a>
+
+                        <a
+                            href="#about"
+                            class="secondary-button"
+                        >
+                            Biz haqimizda
+                        </a>
+
+                    </div>
+
+                    <div class="hero-features">
+
+                        <div>
+                            <strong>⚡</strong>
+                            <span>Tez tayyorlash</span>
+                        </div>
+
+                        <div>
+                            <strong>🥩</strong>
+                            <span>Sifatli mahsulot</span>
+                        </div>
+
+                        <div>
+                            <strong>🚴</strong>
+                            <span>Yetkazib berish</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-food">
+
+                    <div class="food-circle">
+                        🌯
+                    </div>
+
+                    <div class="floating-card card-one">
+                        ⭐ 4.9
+                    </div>
+
+                    <div class="floating-card card-two">
+                        🔥 Eng mashhur
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="categories">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>MENYU</span>
+
+                    <h2>
+                        Nima yeyishni xohlaysiz?
+                    </h2>
+
+                </div>
+
+                <div
+                    class="category-list"
+                    id="categoryList"
+                >
+
+                    <button
+                        class="category active"
+                        data-category="all"
+                    >
+                        <span>🍽️</span>
+                        <b>Barchasi</b>
+                    </button>
+
+                    <button
+                        class="category"
+                        data-category="lavash"
+                    >
+                        <span>🌯</span>
+                        <b>Lavash</b>
+                    </button>
+
+                    <button
+                        class="category"
+                        data-category="burger"
+                    >
+                        <span>🍔</span>
+                        <b>Burger</b>
+                    </button>
+
+                    <button
+                        class="category"
+                        data-category="snack"
+                    >
+                        <span>🍟</span>
+                        <b>Snack</b>
+                    </button>
+
+                    <button
+                        class="category"
+                        data-category="drink"
+                    >
+                        <span>🥤</span>
+                        <b>Ichimlik</b>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MENU ================= -->
+
+        <section
+            class="menu-section"
+            id="menu"
+        >
+
+            <div class="container">
+
+                <div class="menu-top">
+
+                    <div class="section-heading">
+
+                        <span>MAHSULOTLAR</span>
+
+                        <h2>
+                            Bizning menyu
+                        </h2>
+
+                    </div>
+
+                    <div class="search-box">
+
+                        <span>🔎</span>
+
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Mahsulot qidirish..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="products-grid"
+                    id="productsGrid"
+                >
+
+                    <!-- JavaScript mahsulotlarni shu yerga chiqaradi -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROMO ================= -->
+
+        <section class="promo">
+
+            <div class="container">
+
+                <div class="promo-box">
+
+                    <div>
+
+                        <span class="promo-label">
+                            🔥 MAXSUS TAKLIF
+                        </span>
+
+                        <h2>
+                            2 ta lavash + 2 ta ichimlik
+                        </h2>
+
+                        <p>
+                            Do‘stlaringiz bilan mazali
+                            combo buyurtma qiling.
+                        </p>
+
+                    </div>
+
+                    <div class="promo-price">
+
+                        <del>70 000 so‘m</del>
+
+                        <strong>59 000 so‘m</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section
+            class="about"
+            id="about"
+        >
+
+            <div class="container about-grid">
+
+                <div class="about-image">
+                    🌯
+                </div>
+
+                <div class="about-content">
+
+                    <span class="section-label">
+                        LAVASH N1
+                    </span>
+
+                    <h2>
+                        Har bir buyurtma —
+                        mehr bilan tayyorlanadi.
+                    </h2>
+
+                    <p>
+                        Bizning maqsadimiz oddiy:
+                        mijozlarga mazali, sifatli va
+                        tez tayyorlanadigan fast food
+                        taqdim qilish.
+                    </p>
+
+                    <div class="stats">
+
+                        <div>
+                            <strong>10+</strong>
+                            <span>Mahsulot</span>
+                        </div>
+
+                        <div>
+                            <strong>4.9</strong>
+                            <span>Reyting</span>
+                        </div>
+
+                        <div>
+                            <strong>30</strong>
+                            <span>daq. yetkazish</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section
+            class="contact"
+            id="contact"
+        >
+
+            <div class="container">
+
+                <div class="section-heading center">
+
+                    <span>ALOQA</span>
+
+                    <h2>
+                        Biz bilan bog‘laning
+                    </h2>
+
+                </div>
+
+                <div class="contact-grid">
+
+                    <div class="contact-card">
+                        <span>📍</span>
+                        <h3>Manzil</h3>
+                        <p>Shahar markazi</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <span>📞</span>
+                        <h3>Telefon</h3>
+                        <p>+998 99 830 56 03</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <span>🕐</span>
+                        <h3>Ish vaqti</h3>
+                        <p>10:00 — 23:00</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <a href="#" class="logo footer-logo">
+                    🌯 Lavash <b>N1</b>
+                </a>
+
+                <p>
+                    Mazali fast food.
+                    Tez va qulay xizmat.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Sayt</h3>
+
+                <a href="#home">Bosh sahifa</a>
+                <a href="#menu">Menyu</a>
+                <a href="#about">Biz haqimizda</a>
+
+            </div>
+
+            <div>
+
+                <h3>Aloqa</h3>
+
+                <p>📞 +998 99 830 56 03</p>
+                <p>📍 78-Maktab oldi</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Lavash N1. Barcha huquqlar himoyalangan.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= CART DRAWER ================= -->
+
+    <div
+        class="overlay"
+        id="overlay"
+    ></div>
+
+
+    <aside
+        class="cart-drawer"
+        id="cartDrawer"
+    >
+
+        <div class="cart-header">
+
+            <h2>
+                🛒 Savatcha
+            </h2>
+
+            <button
+                id="closeCart"
+                type="button"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cartItems"
+        >
+
+            <div class="empty-cart">
+
+                <div>🛒</div>
+
+                <h3>
+                    Savatcha bo‘sh
+                </h3>
+
+                <p>
+                    Menyudan mahsulot tanlang.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>Jami:</span>
+
+                <strong id="cartTotal">
+                    0 so‘m
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-button"
+                id="checkoutButton"
+            >
+                Buyurtma berish
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= CHECKOUT MODAL ================= -->
+
+    <div
+        class="modal"
+        id="checkoutModal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="closeCheckout"
+            >
+                ✕
+            </button>
+
+            <h2>
+                Buyurtma berish
+            </h2>
+
+            <p>
+                Ma'lumotlaringizni kiriting.
+            </p>
+
+            <form id="checkoutForm">
+
+                <label>
+                    Ismingiz
+
+                    <input
+                        type="text"
+                        name="name"
+                        required
+                        placeholder="Ismingiz"
+                    >
+
+                </label>
+
+                <label>
+                    Telefon
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        required
+                        placeholder="+998 90 123 45 67"
+                    >
+
+                </label>
+
+                <label>
+                    Manzil
+
+                    <textarea
+                        name="address"
+                        required
+                        placeholder="Yetkazib berish manzili"
+                    ></textarea>
+
+                </label>
+
+                <label>
+                    To‘lov turi
+
+                    <select name="payment">
+
+                        <option value="cash">
+                            Naqd pul
+                        </option>
+
+                        <option value="card">
+                            Karta
+                        </option>
+
+                    </select>
+
+                </label>
+
+                <button
+                    type="submit"
+                    class="primary-button full"
+                >
+                    Buyurtmani yuborish
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="toast"
+        id="toast"
+    ></div>
+
+
+    <script src="./js/app.js"></script>
+
+</body>
+</html>
