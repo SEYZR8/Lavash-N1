@@ -1,0 +1,11 @@
+{
+  "name": "aura-ai-robot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AURA 3D AI robot assistant",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": { "start": "node server.js", "dev": "node server.js" },
+  "engines": { "node": ">=20" },
+  "dependencies": { "cors": "^2.8.6", "dotenv": "^17.4.2", "express": "^5.2.1" }
+}
