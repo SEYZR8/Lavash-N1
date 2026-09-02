@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server';import {prisma} from '@/lib/prisma';
+export async function GET(){const [categories,banners,settings]=await Promise.all([prisma.category.findMany({where:{active:true},orderBy:{sortOrder:'asc'},include:{products:{where:{active:true},orderBy:[{featured:'desc'},{popular:'desc'},{id:'desc'}]}}}),prisma.banner.findMany({where:{active:true},orderBy:{sortOrder:'asc'}}),prisma.setting.findMany()]);return NextResponse.json({categories,banners,settings:Object.fromEntries(settings.map(x=>[x.key,x.value]))},{headers:{'Cache-Control':'no-store'}})}
