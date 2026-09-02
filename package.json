@@ -2,14 +2,18 @@
   "name": "lavash-n1",
   "version": "1.0.0",
   "private": true,
+  "engines": { "node": ">=20.9.0" },
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
+    "build:render": "prisma generate && prisma db push && prisma db seed && next build",
     "start": "next start",
     "lint": "next lint",
     "db:push": "prisma db push",
-    "db:seed": "tsx prisma/seed.ts"
+    "db:seed": "prisma db seed",
+    "postinstall": "prisma generate"
   },
+  "prisma": { "seed": "tsx prisma/seed.ts" },
   "dependencies": {
     "@prisma/client": "^6.15.0",
     "lucide-react": "^0.468.0",
