@@ -1,0 +1,3 @@
+import {NextResponse} from 'next/server';import {prisma} from '@/lib/prisma';
+export async function GET(){const rows=await prisma.setting.findMany();return NextResponse.json(Object.fromEntries(rows.map(x=>[x.key,x.value])),{headers:{'Cache-Control':'no-store'}})}
+export async function PUT(req:Request){try{const b=await req.json();for(const [key,value] of Object.entries(b)){if(!/^[a-zA-Z0-9_]+$/.test(key))continue;await prisma.setting.upsert({where:{key},update:{value:String(value).slice(0,1000)},create:{key,value:String(value).slice(0,1000)}})}return NextResponse.json({ok:true})}catch{return NextResponse.json({error:'Sozlamalarni saqlashda xato'},{status:400})}}
