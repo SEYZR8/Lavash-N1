@@ -1,0 +1,3 @@
+import {NextResponse} from 'next/server';import {prisma} from '@/lib/prisma';
+export async function GET(){return NextResponse.json(await prisma.banner.findMany({orderBy:{sortOrder:'asc'}}),{headers:{'Cache-Control':'no-store'}})}
+export async function POST(req:Request){try{const b=await req.json();const title=String(b.title||'').trim();if(!title)return NextResponse.json({error:'Banner sarlavhasi kerak'},{status:400});return NextResponse.json(await prisma.banner.create({data:{title,subtitle:String(b.subtitle||''),button:String(b.button||'Buyurtma berish'),image:String(b.image||''),active:b.active!==false,sortOrder:Number(b.sortOrder||0)}}),{status:201})}catch{return NextResponse.json({error:'Saqlashda xato'},{status:400})}}
